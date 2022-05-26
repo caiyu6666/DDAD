@@ -82,10 +82,10 @@ Different configuration files can be used for experiments on different datasets 
 
 ### AUC under different AR of unlabeled dataset
 Experiments on RSNA dataset. AE is the basic network. 
-<img src='imgs/Ablation_AR.jpg' style="zoom: 30%"/>
+<img src='imgs/Ablation_AR.jpg' width="300px"/>
 
 ### Histograms of anomaly scores
-  <img src='imgs/rec_hist.jpg' style="zoom: 18%"/> <img src='imgs/intra_hist.jpg' style="zoom: 18%"/> <img src='imgs/inter_hist.jpg' style="zoom: 18%"/>
+  <img src='imgs/rec_hist.jpg' width="100px"/> <img src='imgs/intra_hist.jpg' width="100px"/> <img src='imgs/inter_hist.jpg' width="100px"/>
 
 
 ### Contact
