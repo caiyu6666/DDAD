@@ -11,7 +11,7 @@ This is the PyTorch implementation of our paper:
 
 ### Requirements
 * Python 3.6
-* Pytorch 1.70
+* Pytorch 1.7.0
 * tensorboard 2.5.0
 * pillow 6.1.0
 * pydicom 2.3.0 (for data preprocessing)
