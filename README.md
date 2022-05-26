@@ -3,7 +3,7 @@ This is the PyTorch implementation of our paper: Dual-Distribution Discrepancy f
 Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng.
 *International Conference on Medical Image Computing and Computer Assisted Intervention* (MICCAI), 2022, Early Accept.
 
-<img src='imgs/DDAD.jpg' style="zoom: 17%"/>
+<img src='imgs/DDAD.jpg' width="900px"/>
 
 ### Requirements
 * Python 3.6
@@ -82,10 +82,11 @@ Different configuration files can be used for experiments on different datasets 
 
 ### AUC under different AR of unlabeled dataset
 Experiments on RSNA dataset. AE is the basic network. 
-<img src='imgs/Ablation_AR.jpg' width="300px"/>
+
+<img src='imgs/Ablation_AR.jpg' width="600px"/>
 
 ### Histograms of anomaly scores
-  <img src='imgs/rec_hist.jpg' width="100px"/> <img src='imgs/intra_hist.jpg' width="100px"/> <img src='imgs/inter_hist.jpg' width="100px"/>
+  <img src='imgs/rec_hist.jpg' width="300px"/> <img src='imgs/intra_hist.jpg' width="300px"/> <img src='imgs/inter_hist.jpg' width="300px"/>
 
 
 ### Contact
