@@ -1,8 +1,6 @@
 ## DDAD (MICCAI 2022)
 This is the PyTorch implementation of our paper: Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays.
-
 Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng.
-
 *International Conference on Medical Image Computing and Computer Assisted Intervention* (MICCAI), 2022, Early Accept.
 
 <img src='imgs/DDAD.jpg' style="zoom: 17%"/>
