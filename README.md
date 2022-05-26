@@ -6,9 +6,7 @@ Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng.
 <img src='imgs/DDAD.jpg' style="zoom: 17%"/>
 
 ### Requirements
-
-- Python 3.6
-
+* Python 3.6
 * Pytorch 1.70
 * tensorboard 2.5.0
 * pillow 6.1.0
@@ -20,7 +18,6 @@ Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng.
 3. Move the repartition files `rsna_data.json` and `vin_data.json` to corresponding data roots and rename to `data.json`.
 
 The final structure of datasets should be as following:
-
 ```
 ├─DATA_PATH
 │ ├─rsna-pneumonia-detection-challenge   # data root of RSNA dataset
@@ -36,7 +33,6 @@ The final structure of datasets should be as following:
 ```
 
 The `data.json` is a dictionary that storing the data repartition information:
-
 ```
 data.json
 ├─train
@@ -60,27 +56,22 @@ data.json
 ```
 
 ### Train and Evaluate
-
 Train the reconstruction network for module A. (Repeat `K=3` times to obtain an ensemble of *K* networks.)
-
 ```
 python main --config cfgs/RSNA_AE.yaml --mode a
 ```
 
 Train the reconstruction network for module B. (Repeat `K=3` times to obtain an ensemble of *K* networks.)
-
 ```
 python main --config cfgs/RSNA_AE.yaml --mode b
 ```
 
 **Evaluation**
-
 ```
 python main --config cfgs/RSNA_AE.yaml --mode eval
 ```
 
 Each single reconstruction network can also be tested for comparison.
-
 ```
 python main --config cfgs/RSNA_AE.yaml --mode test
 ```
@@ -90,17 +81,13 @@ python main --config cfgs/RSNA_AE.yaml --mode test
 Different configuration files can be used for experiments on different datasets and different basic networks.
 
 ### AUC under different AR of unlabeled dataset
-
 Experiments on RSNA dataset. AE is the basic network. 
-
 <img src='imgs/Ablation_AR.jpg' style="zoom: 30%"/>
 
 ### Histograms of anomaly scores
-
   <img src='imgs/rec_hist.jpg' style="zoom: 18%"/> <img src='imgs/intra_hist.jpg' style="zoom: 18%"/> <img src='imgs/inter_hist.jpg' style="zoom: 18%"/>
 
 
 ### Contact
-
 If you have any question, feel free to email [Yu Cai](mailto:caiyu@hust.edu.cn).
 
