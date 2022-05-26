@@ -25,7 +25,7 @@ The final structure of datasets should be as following:
 │ │ │ ├─xxx.png
 │ │ │ ├─ ......
 │ │ ├─data.json   # repartition file of rsna dataset (renamed from "rsna_data.json")
-│ ├─VinCXR
+│ ├─VinCXR   # data root of VinBigData dataset
 │ │ ├─train_png_512   # preprocessed images of VinBigData dataset
 │ │ │ ├─xxx.png
 │ │ │ ├─ ......
