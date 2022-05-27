@@ -62,22 +62,22 @@ data.json
 ### Train and Evaluate
 Train the reconstruction network for module A. (Repeat `K=3` times to obtain an ensemble of *K* networks.)
 ```
-python main --config cfgs/RSNA_AE.yaml --mode a
+python main.py --config cfgs/RSNA_AE.yaml --mode a
 ```
 
 Train the reconstruction network for module B. (Repeat `K=3` times to obtain an ensemble of *K* networks.)
 ```
-python main --config cfgs/RSNA_AE.yaml --mode b
+python main.py --config cfgs/RSNA_AE.yaml --mode b
 ```
 
 **Evaluation**
 ```
-python main --config cfgs/RSNA_AE.yaml --mode eval
+python main.py --config cfgs/RSNA_AE.yaml --mode eval
 ```
 
 Each single reconstruction network can also be tested for comparison.
 ```
-python main --config cfgs/RSNA_AE.yaml --mode test
+python main.py --config cfgs/RSNA_AE.yaml --mode test
 ```
 
 **In total**, you can directly excute `./train_eval.sh` to train and evaluate the DDAD (AE) on RSNA dataset.
