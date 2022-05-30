@@ -1,13 +1,9 @@
 ## DDAD (MICCAI 2022)
 This is the PyTorch implementation of our paper: 
 
-> [Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays]()
->
-> Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng.
+> [Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays]() <br> Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng. <br>*International Conference on Medical Image Computing and Computer Assisted Intervention* (**MICCAI**), 2022, Early Accept.
 
-* *International Conference on Medical Image Computing and Computer Assisted Intervention* (MICCAI), 2022, Early Accept.
-
-<img src='imgs/DDAD.jpg' width="900px"/>
+<img src='imgs/DDAD.jpg' width="700px"/>
 
 ### Requirements
 * Python 3.6
@@ -37,26 +33,22 @@ The final structure of datasets should be as following:
 ```
 
 The `data.json` is a dictionary that storing the data repartition information:
-```
-data.json
-├─train
-│ ├─0   # The known normal images for one-class training
-│ │ ├─xxx.png
-│ │ ├─......
-│ ├─unlabeled   # The unlabeled images used for proposed DDAD training (not all)
-│ │ ├─0   # normal images used to build the unlabeled dataset
-│ │ │ ├─xxx.png
-│ │ │ ├─......
-│ │ ├─1   # abnormal images used to build the unlabeled dataset
-│ │ │ ├─xxx.png
-│ │ │ ├─......
-├─test
-│ ├─0   # normal testing images
-│ │ ├─xxx.png
-│ │ ├─......
-│ ├─1   # abnormal testing images
-│ │ ├─xxx.png
-│ │ ├─......
+
+```json
+{
+  "train": {
+    "0": ["xxx.png", ...], // The known normal images for one-class training
+    "unlabeled": {
+          "0": ["xxx.png", ...], // normal images used to build the unlabeled dataset
+    	  "1": ["xxx.png", ...]  // abnormal images used to build the unlabeled dataset
+    }
+  },
+  
+  "test": {
+  	"0": ["xxx.png", ...],  // normal testing images
+  	"1": ["xxx.png", ...]  // abnormal testing images
+  }
+}
 ```
 
 ### Train and Evaluate
@@ -87,7 +79,7 @@ Different configuration files can be used for experiments on different datasets 
 ### AUC under different AR of unlabeled dataset
 Experiments on RSNA dataset. AE is the basic network. 
 
-<img src='imgs/Ablation_AR.jpg' width="600px"/>
+<img src='imgs/Ablation_AR.jpg' width="500px"/>
 
 ### Histograms of anomaly scores
   <img src='imgs/rec_hist.jpg' width="300px"/> <img src='imgs/intra_hist.jpg' width="300px"/> <img src='imgs/inter_hist.jpg' width="300px"/>
