@@ -18,7 +18,7 @@ This is the PyTorch implementation of our paper:
 3. Move the repartition files `rsna_data.json` and `vin_data.json` to corresponding data roots and rename to `data.json`.
 
 The final structure of datasets should be as following:
-```
+```python
 ├─DATA_PATH
 │ ├─rsna-pneumonia-detection-challenge   # data root of RSNA dataset
 │ │ ├─train_png_512   # preprocessed images of rsna dataset 
