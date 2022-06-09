@@ -91,13 +91,11 @@ Experiments on RSNA dataset. AE is the basic network.
 If this work is helpful for you, please cite our paper:
 
 ```
-@misc{cai2022dualdistribution,
-      title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays}, 
-      author={Yu Cai and Hao Chen and Xin Yang and Yu Zhou and Kwang-Ting Cheng},
-      year={2022},
-      eprint={2206.03935},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
+@article{cai2022dualdistribution,
+  title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays}, 
+  author={Cai, Yu and Chen, Hao and Xin Yang and Zhou, Yu and Cheng, Kwang-Ting},
+  journal={arXiv preprint arXiv:2206.03935},
+  year={2022}
 }
 ```
 
