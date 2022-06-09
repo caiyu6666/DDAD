@@ -1,7 +1,7 @@
 ## DDAD (MICCAI 2022)
 This is the PyTorch implementation of our paper: 
 
-> [Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays]() <br> Yu Cai, Hao Chen, Xin Yang, Yu Zhou, Kwang-Ting Cheng. <br>*International Conference on Medical Image Computing and Computer Assisted Intervention* (**MICCAI**), 2022, Early Accept.
+> **[Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays](https://arxiv.org/pdf/2206.03935.pdf) **<br> [Yu Cai](https://caiyu6666.github.io/), [Hao Chen](https://cse.hkust.edu.hk/~jhc/), [Xin Yang](https://sites.google.com/view/xinyang/home), [Yu Zhou](https://www.vlrlab.net/~yuzhou), [Kwang-Ting Cheng](https://seng.hkust.edu.hk/about/people/faculty/tim-kwang-ting-cheng). <br>*International Conference on Medical Image Computing and Computer Assisted Intervention* (**MICCAI**), 2022, Early Accept.
 
 <img src='imgs/DDAD.jpg' width="700px"/>
 
@@ -85,6 +85,24 @@ Experiments on RSNA dataset. AE is the basic network.
   <img src='imgs/rec_hist.jpg' width="300px"/> <img src='imgs/intra_hist.jpg' width="300px"/> <img src='imgs/inter_hist.jpg' width="300px"/>
 
 
-### Contact
-If you have any question, feel free to email [Yu Cai](mailto:caiyu@hust.edu.cn).
 
+### Citation
+
+If this work is helpful for you, please cite our paper:
+
+```
+@misc{cai2022dualdistribution,
+      title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays}, 
+      author={Yu Cai and Hao Chen and Xin Yang and Yu Zhou and Kwang-Ting Cheng},
+      year={2022},
+      eprint={2206.03935},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+```
+
+
+
+### Contact
+
+If you have any question, feel free to email [Yu Cai](mailto:caiyu@hust.edu.cn).
