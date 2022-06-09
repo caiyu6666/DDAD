@@ -93,7 +93,7 @@ If this work is helpful for you, please cite our paper:
 ```
 @article{cai2022dualdistribution,
   title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays}, 
-  author={Cai, Yu and Chen, Hao and Xin Yang and Zhou, Yu and Cheng, Kwang-Ting},
+  author={Cai, Yu and Chen, Hao and Yang, Xin and Zhou, Yu and Cheng, Kwang-Ting},
   journal={arXiv preprint arXiv:2206.03935},
   year={2022}
 }
