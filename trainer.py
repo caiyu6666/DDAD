@@ -45,6 +45,7 @@ def train_module_ab(cfgs, opt, out_dir):
     elif network == "MemAE":
         model = MemAE_trainer(model, train_loader, test_loader, optimizer, num_epoch, writer, cfgs, opt)
     writer.close()
+    print()
 
     model_path = os.path.join(out_dir, "{}".format(opt.mode))
     if not os.path.exists(model_path):
