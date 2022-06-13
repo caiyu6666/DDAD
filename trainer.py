@@ -110,6 +110,7 @@ def MemAE_trainer(model, train_loader, test_loader, optimizer, num_epoch, writer
     t0 = time.time()
     for e in range(num_epoch):
         l1s = []
+        ent_ls = []
         model.train()
         for (x, _, _) in train_loader:
             x = x.cuda()
@@ -124,13 +125,15 @@ def MemAE_trainer(model, train_loader, test_loader, optimizer, num_epoch, writer
             loss = loss1 + entropy_loss_weight * entropy_loss
 
             l1s.append(rec_err.mean().item())
-
+            ent_ls.append(entropy_loss.mean().item())
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
 
         l1s = np.mean(l1s)
+        ent_ls = np.mean(ent_ls)
         writer.add_scalar('rec_err', l1s, e)
+        writer.add_scalar('entropy_loss', ent_ls, e)
         if e % 25 == 0:
             t = time.time() - t0
             t0 = time.time()
@@ -140,9 +143,9 @@ def MemAE_trainer(model, train_loader, test_loader, optimizer, num_epoch, writer
                 writer.add_scalar('AUC', auc, e)
                 writer.add_scalar('AP', ap, e)
                 print("Mode {}. Epoch[{}/{}]  Time:{:.2f}s  AUC:{:.3f}  AP:{:.3f}   "
-                      "Rec_err:{:.5f}".format(opt.mode, e, num_epoch, t, auc, ap, l1s))
+                      "Rec_err:{:.5f}   Entropy_loss:{:.5f}".format(opt.mode, e, num_epoch, t, auc, ap, l1s, ent_ls))
             else:
                 print("Mode {}. Epoch[{}/{}]  Time:{:.2f}s  "
-                      "Rec_err:{:.5f}".format(opt.mode, e, num_epoch, t, l1s))
+                      "Rec_err:{:.5f}   Entropy_loss:{:.5f}".format(opt.mode, e, num_epoch, t, l1s, ent_ls))
 
     return model
