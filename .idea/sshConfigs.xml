@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="jhcpu1.cse.ust.hk" id="e8a5a80a-5374-426d-b2ae-9c96c23da1ee" port="22" nameFormat="DESCRIPTIVE" username="caiyu" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

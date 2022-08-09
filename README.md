@@ -3,7 +3,7 @@ This is the PyTorch implementation of our paper:
 
 > **[Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays](https://arxiv.org/pdf/2206.03935.pdf)** <br> [Yu Cai](https://caiyu6666.github.io/), [Hao Chen](https://cse.hkust.edu.hk/~jhc/), [Xin Yang](https://sites.google.com/view/xinyang/home), [Yu Zhou](https://www.vlrlab.net/~yuzhou), [Kwang-Ting Cheng](https://seng.hkust.edu.hk/about/people/faculty/tim-kwang-ting-cheng). <br>*International Conference on Medical Image Computing and Computer Assisted Intervention* (**MICCAI**), 2022, Early Accept.
 
-<img src='imgs/DDAD.jpg' width="700px"/>
+<img src='imgs/DDAD.png' width="700px"/>
 
 ### Requirements
 * Python 3.6
@@ -82,7 +82,7 @@ Experiments on RSNA dataset. AE is the basic network.
 <img src='imgs/Ablation_AR.jpg' width="500px"/>
 
 ### Histograms of anomaly scores
-  <img src='imgs/rec_hist.jpg' width="300px"/> <img src='imgs/intra_hist.jpg' width="300px"/> <img src='imgs/inter_hist.jpg' width="300px"/>
+  <img src='imgs/rec_hist.jpg' width="250px"/> <img src='imgs/intra_hist.jpg' width="250px"/> <img src='imgs/inter_hist.jpg' width="250px"/>
 
 
 
@@ -91,8 +91,8 @@ Experiments on RSNA dataset. AE is the basic network.
 If this work is helpful for you, please cite our paper:
 
 ```
-@article{cai2022dualdistribution,
-  title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays}, 
+@article{cai2022dual,
+  title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays},
   author={Cai, Yu and Chen, Hao and Yang, Xin and Zhou, Yu and Cheng, Kwang-Ting},
   journal={arXiv preprint arXiv:2206.03935},
   year={2022}
