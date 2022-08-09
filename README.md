@@ -1,4 +1,10 @@
 ## DDAD (MICCAI 2022)
+Our significant extension version of DDAD, named DDAD-ASR, will be soon available at https://github.com/caiyu6666/DDAD-ASR
+
+---
+
+
+
 This is the PyTorch implementation of our paper: 
 
 > **[Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays](https://arxiv.org/pdf/2206.03935.pdf)** <br> [Yu Cai](https://caiyu6666.github.io/), [Hao Chen](https://cse.hkust.edu.hk/~jhc/), [Xin Yang](https://sites.google.com/view/xinyang/home), [Yu Zhou](https://www.vlrlab.net/~yuzhou), [Kwang-Ting Cheng](https://seng.hkust.edu.hk/about/people/faculty/tim-kwang-ting-cheng). <br>*International Conference on Medical Image Computing and Computer Assisted Intervention* (**MICCAI**), 2022, Early Accept.
@@ -13,7 +19,7 @@ This is the PyTorch implementation of our paper:
 * pydicom 2.3.0 (for data preprocessing)
 
 ### Data Preparation
-1. Download the training dataset of [RSNA Pneumonia Detection Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) and [VinBigData Chest X-ray Abnormalities Detection](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/data) challenge. Notice that we only use their training set as labels of testing set are not available. 
+1. Download the training dataset of [RSNA Pneumonia Detection Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) and [VinBigData Chest X-ray Abnormalities Detection](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/data) challenge. Note that we only use their training set as labels of testing set are not available. 
 2. Use `data/preprocess.py` to preprocess the two datasets respectively. The output files should be `*.png`.
 3. Move the repartition files `rsna_data.json` and `vin_data.json` to corresponding data roots and rename to `data.json`.
 
