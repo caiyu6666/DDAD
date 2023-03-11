@@ -1,5 +1,5 @@
 ## DDAD (MICCAI 2022)
-Our significant extension version of DDAD, named DDAD-ASR, will be soon available at https://github.com/caiyu6666/DDAD-ASR
+Our significant extension version of DDAD, named DDAD-ASR, is available at https://github.com/caiyu6666/DDAD-ASR
 
 ---
 
@@ -19,6 +19,14 @@ This is the PyTorch implementation of our paper:
 * pydicom 2.3.0 (for data preprocessing)
 
 ### Data Preparation
+
+#### Option 1
+
+Download the well-processed Med-AD benchmark from: [Google Drive](https://drive.google.com/file/d/1ijdaVBNdkYP4h0ClYFYTq9fN1eHoOSa6/view?usp=sharing) | [OneDrive](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ycaibt_connect_ust_hk/EdCbKrjjRMlKi-1AotcAfkoB_jmbTQ2gnQChltgh7l8xVQ?e=t17t2S). <br>
+(The benchmark is organized using 4 public datasets including RSNA and VinDr-CXR, and should be **only applied for academic research**.)
+
+#### Option 2
+
 1. Download the training dataset of [RSNA Pneumonia Detection Challenge](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) and [VinBigData Chest X-ray Abnormalities Detection](https://www.kaggle.com/c/vinbigdata-chest-xray-abnormalities-detection/data) challenge. Note that we only use their training set as labels of testing set are not available. 
 2. Use `data/preprocess.py` to preprocess the two datasets respectively. The output files should be `*.png`.
 3. Move the repartition files `rsna_data.json` and `vin_data.json` to corresponding data roots and rename to `data.json`.
@@ -40,19 +48,19 @@ The final structure of datasets should be as following:
 
 The `data.json` is a dictionary that storing the data repartition information:
 
-```json
+```python
 {
   "train": {
-    "0": ["*.png", ], // The known normal images for one-class training
+    "0": ["*.png", ], # The known normal images for one-class training
     "unlabeled": {
-          "0": ["*.png", ], // normal images used to build the unlabeled dataset
-    	  "1": ["*.png", ]  // abnormal images used to build the unlabeled dataset
+          "0": ["*.png", ], # normal images used to build the unlabeled dataset
+    	  "1": ["*.png", ]  # abnormal images used to build the unlabeled dataset
     }
   },
   
   "test": {
-  	"0": ["*.png", ],  // normal testing images
-  	"1": ["*.png", ]  // abnormal testing images
+  	"0": ["*.png", ],  # normal testing images
+  	"1": ["*.png", ]  # abnormal testing images
   }
 }
 ```
@@ -69,6 +77,7 @@ python main.py --config cfgs/RSNA_AE.yaml --mode b
 ```
 
 **Evaluation**
+
 ```
 python main.py --config cfgs/RSNA_AE.yaml --mode eval
 ```
@@ -97,11 +106,13 @@ Experiments on RSNA dataset. AE is the basic network.
 If this work is helpful for you, please cite our paper:
 
 ```
-@article{cai2022dual,
+@inproceedings{cai2022dual,
   title={Dual-Distribution Discrepancy for Anomaly Detection in Chest X-Rays},
   author={Cai, Yu and Chen, Hao and Yang, Xin and Zhou, Yu and Cheng, Kwang-Ting},
-  journal={arXiv preprint arXiv:2206.03935},
-  year={2022}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={584--593},
+  year={2022},
+  organization={Springer}
 }
 ```
 
@@ -109,4 +120,4 @@ If this work is helpful for you, please cite our paper:
 
 ### Contact
 
-If you have any question, feel free to email [Yu Cai](mailto:caiyu@hust.edu.cn).
+If you have any question, feel free to email [Yu Cai](mailto:yu.cai@connect.ust.hk).
