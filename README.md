@@ -114,6 +114,17 @@ If this work is helpful for you, please cite our paper:
   year={2022},
   organization={Springer}
 }
+
+@article{CAI2023102794,
+title = {Dual-distribution discrepancy with self-supervised refinement for anomaly detection in medical images},
+journal = {Medical Image Analysis},
+volume = {86},
+pages = {102794},
+year = {2023},
+issn = {1361-8415},
+doi = {https://doi.org/10.1016/j.media.2023.102794},
+author = {Yu Cai and Hao Chen and Xin Yang and Yu Zhou and Kwang-Ting Cheng},
+}
 ```
 
 
