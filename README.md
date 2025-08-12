@@ -22,8 +22,10 @@ This is the PyTorch implementation of our paper:
 
 #### Option 1
 
-Download the well-processed Med-AD benchmark from: [Google Drive](https://drive.google.com/file/d/1ijdaVBNdkYP4h0ClYFYTq9fN1eHoOSa6/view?usp=sharing) | [OneDrive](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ycaibt_connect_ust_hk/EdCbKrjjRMlKi-1AotcAfkoB_jmbTQ2gnQChltgh7l8xVQ?e=t17t2S). <br>
-(The benchmark is organized using 4 public datasets including RSNA and VinDr-CXR, and should be **only applied for academic research**.)
+**[Update!] We have uploaded the datasets to Zenodo for permanent access.**
+
+Download the well-processed Med-AD benchmark from: [Google Drive](https://drive.google.com/file/d/1ijdaVBNdkYP4h0ClYFYTq9fN1eHoOSa6/view?usp=sharing) | [Zenodo](https://zenodo.org/records/12677223). <br>
+(The benchmark is organized using multiple public datasets including RSNA and VinDr-CXR, and should be **only applied for academic research**.)
 
 #### Option 2
 
